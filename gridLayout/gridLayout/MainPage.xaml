@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="gridLayout.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <Grid ColumnSpacing="0" RowSpacing="1">
+        <!--  Number of rows  -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+
+        <!--  Number of Columns  -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!--  Row and Col default value is 0  -->
+        <BoxView Color="Green" />
+        <Label
+            HorizontalOptions="Center"
+            Text="Row 0, Col 0"
+            VerticalOptions="Center" />
+
+        <BoxView
+            Grid.Row="0"
+            Grid.Column="1"
+            Color="Blue" />
+        <Label
+            Grid.Row="0"
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            Text="Row 0, Col 1"
+            VerticalOptions="Center" />
+
+        <BoxView Grid.Row="1" Color="Teal" />
+        <Label
+            Grid.Row="1"
+            HorizontalOptions="Center"
+            Text="Row 1, Col 0"
+            VerticalOptions="Center" />
+
+        <BoxView
+            Grid.Row="1"
+            Grid.Column="1"
+            Color="Purple" />
+        <Label
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalOptions="Center"
+            Text="Row 1, Col 1"
+            VerticalOptions="Center" />
+
+
+
+        <BoxView
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Color="Red" />
+        <Label
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            HorizontalOptions="Center"
+            Text="Row 2, Col 0 and 1"
+            VerticalOptions="Center" />
+    </Grid>
+
+</ContentPage>
